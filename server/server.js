@@ -30,6 +30,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", // frontend dev
+       "https://expense-management-production-f150.up.railway.app",
       "https://your-frontend-domain.com", // frontend prod (future)
     ],
     credentials: true,
@@ -66,8 +67,8 @@ const PORT = process.env.PORT || 5000;
   .then(() => console.log("✅ Database synced"))
   .catch(err => console.log(err));
 
-    app.listen(PORT, () =>
-      console.log(`🚀 Server running on http://localhost:${PORT}`)
+    app.listen(PORT, "0.0.0.0", () =>
+      console.log(`🚀 Server running on port ${PORT}`)
     );
   } catch (err) {
     console.error("❌ Server failed to start:", err);
