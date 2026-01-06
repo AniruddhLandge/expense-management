@@ -20,6 +20,7 @@ export default function Login() {
         password,
       });
 
+
       // Save token & user info in localStorage
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
