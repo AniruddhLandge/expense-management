@@ -30,8 +30,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", // frontend dev
-       "https://expense-management-production-f150.up.railway.app",
-      "https://your-frontend-domain.com", // frontend prod (future)
+      //  "https://expense-management-production-f150.up.railway.app",
+      "https://expenseview.netlify.app/", // frontend prod (future)
     ],
     credentials: true,
   })
