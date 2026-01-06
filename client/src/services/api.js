@@ -2,7 +2,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // apne backend ka base URL daalo
+  // baseURL: "http://localhost:5000/api", // apne backend ka base URL daalo
+  baseURL: `${process.env.REACT_APP_API_URL}/api`, // apne backend ka base URL daalo
   headers: {
     "Content-Type": "application/json",
   },

@@ -14,12 +14,17 @@ export default function Login() {
     setError('');
     setLoading(true);
 
+    // try {
+    //   const res = await axios.post('http://localhost:5000/api/auth/login', {
+    //     email,
+    //     password,
+    //   });
+
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
         email,
         password,
       });
-
 
       // Save token & user info in localStorage
       localStorage.setItem('token', res.data.token);

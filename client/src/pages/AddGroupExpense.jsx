@@ -15,7 +15,8 @@ export default function AddGroupExpense() {
 
     // ✅ Step 1: Store in database
     await axios.post(
-      `http://localhost:5000/api/groups/${groupId}/expenses`,
+      // `http://localhost:5000/api/groups/${groupId}/expenses`,
+      `${process.env.REACT_APP_API_URL}/api/groups/${groupId}/expenses`,
       { title, amount, category },
       { headers: { Authorization: `Bearer ${token}` } }
     );

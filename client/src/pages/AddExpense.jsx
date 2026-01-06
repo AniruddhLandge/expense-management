@@ -59,7 +59,8 @@ export default function AddExpense() {
       }
 
       const res = await axios.post(
-        "http://localhost:5000/api/expenses",
+        // "http://localhost:5000/api/expenses",
+        `${process.env.REACT_APP_API_URL}/api/expenses`,
         { title, amount, category },
         { headers: { Authorization: `Bearer ${token}` } }
       );

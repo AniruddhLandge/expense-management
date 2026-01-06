@@ -27,7 +27,8 @@ const Dashboard = () => {
 
     const fetchExpenses = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/expenses", {
+        // const res = await axios.get("http://localhost:5000/api/expenses", {
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/expenses`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setExpenses(res.data);
@@ -57,7 +58,8 @@ const Dashboard = () => {
   const updateLimit = async () => {
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/user/update-limit",
+        // "http://localhost:5000/api/user/update-limit",
+        `${process.env.REACT_APP_API_URL}/api/user/update-limit`,
         { monthlyLimit: newLimit },
         { headers: { Authorization: `Bearer ${token}` } }
       );

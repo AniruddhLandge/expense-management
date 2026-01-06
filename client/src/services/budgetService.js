@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/budget";
+// const API = "http://localhost:5000/api/budget";
+const API = `${process.env.REACT_APP_API_URL}/api/budget`;
 const auth = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } });
 
 // ✅ Get current month budget + extra spending
