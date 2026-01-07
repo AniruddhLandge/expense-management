@@ -13,7 +13,7 @@ const Group = sequelize.define("Group", {
   },
 },
   {
-    tableName: "`Groups`",     
+    tableName: "groups",     
     freezeTableName: true,  
     timestamps: true,
   }
