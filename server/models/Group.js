@@ -11,13 +11,13 @@ const Group = sequelize.define("Group", {
     type: DataTypes.JSON, 
     allowNull: false,
   },
-// },
-//   {
-//     tableName: "user_groups",     
-//     freezeTableName: true,  
-//     timestamps: true,
-//   }
-});
+},
+  {
+    tableName: "user_groups",     
+    freezeTableName: true,  
+    timestamps: true,
+  }
+);
 
 export default Group;
 
