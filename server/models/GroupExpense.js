@@ -28,6 +28,7 @@ const GroupExpense = sequelize.define("GroupExpense", {
 );
 
 // ✅ GroupExpense belongs to Group
+Group.hasMany(GroupExpense, { foreignKey: "groupId" });
 GroupExpense.belongsTo(Group, { foreignKey: "groupId", onDelete: "CASCADE" });
 
 export default GroupExpense;
