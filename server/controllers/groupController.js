@@ -24,8 +24,8 @@ export const getGroups = async (req, res) => {
         [
           Sequelize.literal(`(
             SELECT COALESCE(SUM(amount), 0)
-            FROM groupexpenses
-            WHERE groupexpenses.groupId = Group.id
+            FROM GroupExpenses
+            WHERE GroupExpenses.groupId = Group.id
           )`),
           "totalSpent"
         ]
