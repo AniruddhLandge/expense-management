@@ -15,7 +15,13 @@ const GroupExpense = sequelize.define("GroupExpense", {
     type: DataTypes.STRING,
     allowNull: true,
   },
-});
+},
+{
+    tableName: "GroupExpenses",   
+    freezeTableName: true,
+    timestamps: true,
+  }
+);
 
 // ✅ GroupExpense belongs to Group
 GroupExpense.belongsTo(Group, { foreignKey: "groupId", onDelete: "CASCADE" });
