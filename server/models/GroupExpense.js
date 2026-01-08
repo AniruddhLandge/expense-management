@@ -15,6 +15,10 @@ const GroupExpense = sequelize.define("GroupExpense", {
     type: DataTypes.STRING,
     allowNull: true,
   },
+  groupId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
 },
 {
     tableName: "GroupExpenses",   
