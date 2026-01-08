@@ -15,7 +15,7 @@ const Group = sequelize.define("Group", {
   {
     tableName: "user_groups",     
     freezeTableName: true,  
-    timestamps: false,
+    timestamps: true,
 
   }
 );
